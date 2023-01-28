@@ -7,17 +7,17 @@ public abstract class BaseHome {
     private int hall;
     private double price;
     private int squareMeter;
-    private HomeType houseType;
 
 
-    public BaseHome(String id, String address, int room, int hall, double price, int squareMeter, HomeType houseType) {
+
+    public BaseHome(String id, String address, int room, int hall, double price, int squareMeter) {
         this.id = id;
         this.address = address;
         this.room = room;
         this.hall = hall;
         this.price = price;
         this.squareMeter = squareMeter;
-        this.houseType = houseType;
+
     }
 
 
@@ -69,22 +69,15 @@ public abstract class BaseHome {
         this.squareMeter = squareMeter;
     }
 
-    public HomeType getHouseType() {
-        return houseType;
-    }
 
-    public void setHouseType(HomeType houseType) {
-        this.houseType = houseType;
-    }
 
     @Override
     public String toString() {
-        return  "id='" + id + '\'' +
+        return "id='" + id + '\'' +
                 ", address='" + address + '\'' +
                 ", room=" + room +
                 ", hall=" + hall +
                 ", price=" + price +
-                ", squareMeter=" + squareMeter +
-                ", houseType=" + houseType ;
+                ", squareMeter=" + squareMeter;
     }
 }
